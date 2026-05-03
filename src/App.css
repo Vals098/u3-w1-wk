@@ -86,16 +86,75 @@ header {
   color: #e6e6e6;
 }
 
-.carousel img {
-  transition: transform 0.3s;
+.movie-row {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 40px;
 }
 
-.carousel img:hover {
-  transform: scale(1.1);
+.movie-track {
+  display: flex;
+  gap: 5px;
+  overflow: visible;
 }
 
-.carousel-item .row div {
-  padding: 0;
+.movie-item {
+  flex: 0 0 auto;
+  width: 150px;
+  position: relative;
+}
+
+.movie-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  z-index: 10;
+}
+
+.movie-item:hover img {
+  transform: scale(1.15);
+}
+
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+/* frecce base */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel-wrapper:hover .arrow {
+  opacity: 1;
+}
+
+/* sinistra */
+.arrow.left {
+  left: 0;
+}
+
+/* destra */
+.arrow.right {
+  right: 0;
 }
 
 /* FOOTER */
@@ -241,4 +300,3 @@ footer {
   background-color: #333333;
   color: white;
 }
-

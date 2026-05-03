@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <NetflixNavbar></NetflixNavbar>
-      <NetflixCarousel query="harry potter" title="Harry Potter" />
-      <NetflixCarousel query="star wars" title="Star Wars" />
-      <NetflixCarousel query="lord of the rings" title="Lord of the Rings" />
+      <NetflixCarousel query="lord of the rings" title="The Lord of the Rings Saga" />
+      <NetflixCarousel query="harry potter" title="Harry Potter Saga" />
+      <NetflixCarousel query="matrix" title="Matrix Saga" />
       <NetflixFooter></NetflixFooter>
     </>
   )
