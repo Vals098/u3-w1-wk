@@ -86,7 +86,7 @@ class NetflixCarousel extends Component {
           className="movie-row"
           ref={(el) => (this.rowRef = el)} //link to row
         >
-          <div className="movie-track py-3">
+          <div className="movie-track py-3 ">
             {this.state.movies.map((movie) => (
               <div key={movie.imdbID} className="movie-item">
                 <img src={movie.Poster} alt={movie.Title} />
