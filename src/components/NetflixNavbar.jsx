@@ -49,6 +49,16 @@ function NetflixNavbar() {
                   My List
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#profile">
+                  My Profile
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#settings">
+                  Settings
+                </a>
+              </li>
             </ul>
 
             <ul className="navbar-nav d-flex justify-content-end align-items-center d-none d-md-flex">
@@ -100,7 +110,7 @@ function NetflixNavbar() {
                   <li>
                     <a
                       className="dropdown-item"
-                      href="#"
+                      href="#profile"
                     >
                       Profile
                     </a>
@@ -108,13 +118,10 @@ function NetflixNavbar() {
                   <li>
                     <a
                       className="dropdown-item"
-                      href="#"
+                      href="#settings"
                     >
                       Settings
                     </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
                   </li>
                 </ul>
               </li>

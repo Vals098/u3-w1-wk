@@ -1,6 +1,6 @@
 function NetflixSettings() {
   return (
-    <div className="settings-body">
+    <div id="settings" className="settings-body">
       <main className="settings-main">
         <div className="container mt-md-3 p-5">
           <div className="row justify-content-center">
