@@ -3,6 +3,8 @@ import { Component } from "react"
 class NetflixCarousel extends Component {
   state = {
     movies: [],
+    loading: true,
+    error: false,
   }
 
   rowRef = null
@@ -19,10 +21,15 @@ class NetflixCarousel extends Component {
       .then((data) => {
         this.setState({
           movies: data.Search,
+          loading: false,
         })
       })
       .catch((error) => {
         console.log(error)
+        this.setState({
+          error: true,
+          loading: false,
+        })
       })
   }
 
@@ -49,6 +56,23 @@ class NetflixCarousel extends Component {
   }
 
   render() {
+    // conditions
+    if (this.state.loading) {
+      return (
+        <div className="carousel-wrapper">
+          <h2 className="text-light">{this.props.title}</h2>
+          <p className="text-light px-4 text-center">Loading...</p>
+        </div>
+      )
+    }
+    if (this.state.error) {
+           return (
+        <div className="carousel-wrapper">
+          <h2 className="text-light">{this.props.title}</h2>
+          <p className="text-danger px-4 text-center">Error while loading</p>
+        </div>
+      )
+    }
     return (
       <div className="carousel-wrapper">
         <h2 className="text-light">{this.props.title}</h2>
@@ -60,7 +84,7 @@ class NetflixCarousel extends Component {
 
         <div
           className="movie-row"
-          ref={(el) => (this.rowRef = el)} // 👈 COLLEGAMENTO
+          ref={(el) => (this.rowRef = el)} //link to row
         >
           <div className="movie-track">
             {this.state.movies.map((movie) => (
