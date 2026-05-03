@@ -77,7 +77,7 @@ class NetflixCarousel extends Component {
       <div className="carousel-wrapper">
         <h2 className="text-light">{this.props.title}</h2>
 
-        {/* freccia sinistra */}
+        {/* left arrow */}
         <button className="arrow left" onClick={this.scrollLeft}>
           ‹
         </button>
@@ -86,7 +86,7 @@ class NetflixCarousel extends Component {
           className="movie-row"
           ref={(el) => (this.rowRef = el)} //link to row
         >
-          <div className="movie-track">
+          <div className="movie-track py-3">
             {this.state.movies.map((movie) => (
               <div key={movie.imdbID} className="movie-item">
                 <img src={movie.Poster} alt={movie.Title} />
@@ -95,7 +95,7 @@ class NetflixCarousel extends Component {
           </div>
         </div>
 
-        {/* freccia destra */}
+        {/* right arrow */}
         <button className="arrow right" onClick={this.scrollRight}>
           ›
         </button>

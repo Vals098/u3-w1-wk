@@ -100,7 +100,7 @@ function NetflixNavbar() {
                   <li>
                     <a
                       className="dropdown-item"
-                      href="../ProfilePage/profile.html"
+                      href="#"
                     >
                       Profile
                     </a>
@@ -108,7 +108,7 @@ function NetflixNavbar() {
                   <li>
                     <a
                       className="dropdown-item"
-                      href="../SettingsPage/settings.html"
+                      href="#"
                     >
                       Settings
                     </a>
